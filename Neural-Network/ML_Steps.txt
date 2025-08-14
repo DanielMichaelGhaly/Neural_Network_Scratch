@@ -1,0 +1,24 @@
+1. Feed Input then data flows from layer to layer then retrieve output.
+    y = network(x,w)
+
+2. Calculate error
+    (e.g. E = 1/2(y* - y)^2
+
+3. Adjust the parameters using gradient descent
+to find the optimal parameters of the model.
+    w <- w - alpha(delta E/delta w)
+
+4. Start again
+
+So if we have derivative of error E with respect to output Y
+we need to get 2 things:
+1. derivative of error with respect to parameters(Weights and Bias)
+2. derivative of error with respect to input X
+
+Derivative of Error with respect to parameter w is
+derivative of error with respect to corresponding output MULTIPLIED the corresponding x
+which in simple words derivative of error E with respect to output Y times X transpose.
+
+Derivative of E with respect to Bias = derivative of E with respect to Y.
+
+Derivative of E with respect to X is W transpose times derivative of E with respect to Y.
